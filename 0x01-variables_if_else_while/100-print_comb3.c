@@ -13,19 +13,11 @@ int main(void)
 	{
 		while (m <= '9')
 		{
-			if (!(n > m) || n == m)
+			if (!(n > m || n == m))
 			{
 				putchar(n);
 				putchar(m);
-				if (n >= m)
-				{
-					continue;
-				}
 				if (n == '8' && m == '9')
-				{
-					putchar('\n');
-				}
-				else
 				{
 					putchar(',');
 					putchar(' ');
@@ -36,5 +28,6 @@ int main(void)
 		m = '0';
 		n++;
 	}
+	putchar('\n');
 	return (0);
 }
