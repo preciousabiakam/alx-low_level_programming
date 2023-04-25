@@ -17,6 +17,10 @@ int main(void)
 			{
 				putchar(n);
 				putchar(m);
+				if (n >= m)
+				{
+					continue;
+				}
 				if (n == '8' && m == '9')
 				{
 					putchar('\n');
