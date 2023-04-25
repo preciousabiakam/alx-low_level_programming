@@ -15,12 +15,12 @@ int main(void)
 		{
 			if (!(n > m || n == m))
 			{
-				putchar(n);
-				putchar(m);
+				putchar(',');
+				putchar(' ');
 				if (n == '8' && m == '9')
 				{
-					putchar(',');
-					putchar(' ');
+					putchar(n);
+					putchar(m);
 				}
 			}
 			m++;
