@@ -1,14 +1,15 @@
 #include "main.h"
 
 /**
- * Main - Entry point
- * Description: - 'returns the largest of 3 numbers'
+ * largest_number - returns the largest of 3 numbers
+ * @a: first integer
+ * @b: second integer
+ * @c: third integer
  * Return: largest number
  */
 
-int main(void)
+int largest_number(int a, int b, int c)
 {
-	int a, b, c;
 	int largest;
 
 	if (a > b && a > c)
