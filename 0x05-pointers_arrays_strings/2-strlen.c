@@ -6,9 +6,9 @@
  */
 int _strlen(char *str)
 {
-	size_t len = 0;
+	int m = 0;
 
-	while (*str++)
-		len++;
-	return (len);
+	while (*(str + m))
+		m++;
+	return (m);
 }
