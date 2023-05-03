@@ -5,7 +5,7 @@
  *
  * @n: integer to print to character
  */
-void print_numbers(int n)
+void print_number(int n)
 {
 	int i;
 	int d = 1;
