@@ -1,45 +1,26 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 #include "main.h"
 
 /**
- *main - entry point to the execution of code
+ *_atoi - converts a string to an int
+ *@s: parameter to be parsed
  *
- *Return: if success generated password
+ *Return: the converted integer if no bugs
  */
 
-int main(void)
+int _atoi(char *s)
 {
-	int i, j, k, s;
-	char c[] = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char p[58];
+	int sign = 1;
+	unsigned int num = 0;
 
-	srand(time(NULL));
-	while (s != 2772)
 	{
-		i = k = s = 0;
-		while ((2772 - 122) > s)
-		{
-			j = rand() % 62;
-			p[i] = c[j];
-			s += c[j];
-			i++;
-		}
-		while (c[k])
-		{
-			if (c[k] == (2772 - s))
-			{
-				p[i] = c[k];
-				s += c[k];
-				i++;
-				break;
-			}
-			k++;
-		}
+		do
+		if  (*s == '-')
+			sign *= -1;
+		else if (*s >= '0' && *s <= '9')
+			num = num * 10 + (*s - '0');
+		else if (num > 0)
+			break;
+		while (*s++);
 	}
-	p[i] = '\0';
-	printf("%s", p);
-	return (0);
+	return (num * sign);
 }
-
